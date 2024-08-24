@@ -1,0 +1,2 @@
+from network_security.entity.config_entity import DataIngestionConfig
+from network_security.entity.artifacttity import DataIngestionArifact
