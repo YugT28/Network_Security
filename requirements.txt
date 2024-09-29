@@ -5,5 +5,14 @@ pymongo
 certifi
 pymongo[srv]
 scikit-learn
+fastapi[standard]
+uvicorn
+apache-airflow
+pyyaml[srv]
+dill
+xgboost
+mlflow
+dvc
+
 
 -e .

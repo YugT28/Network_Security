@@ -1,6 +1,6 @@
 .venv
-.env
 .idea
 logs
 network_security.egg-info
 Artifact
+.env

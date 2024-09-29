@@ -65,13 +65,23 @@ class ModelTrainerConfig:
         self.overfitting_underfitting_threshold = training_pipeline.MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD
 
 class ModelEvaluationConfig:
-    def __init__(self):
-        pass
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_evaluation_dir = Path(training_pipeline_config.artifact_dir,training_pipeline.MODEL_EVALUATION_DIR_NAME)
+        self.report_file_path= Path(self.model_evaluation_dir,training_pipeline.MODEL_EVALUATION_REPORT_NAME)
+        self.change_threshold = training_pipeline.MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
 
 class ModelPusherConfig:
-     def __init__(self):
-        pass
+     def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+         self.model_evaluation_dir:str=Path.joinpath(training_pipeline_config.artifact_dir,training_pipeline.MODEL_FILE_NAME)
+         timestamp=round(datetime.now().timestamp())
+         self.saved_model_path=Path.joinpath(training_pipeline.SAVED_MODEL_DIR,f"{timestamp}",training_pipeline.MODEL_FILE_NAME)
+
 
 
 if __name__=='__main__':
-    pass
+    x=TrainingPipelineConfig()
+    y=DataIngestionConfig(x)
+    print(y.data_ingestion_dir)
+    print(Path(y.feature_store_file_path).parent)
+    with open(r"Artifact/08_24_2024_22_22_48/data_ingestion/feature_store/NetworkData.csv",mode='r') as f:
+        print(f)

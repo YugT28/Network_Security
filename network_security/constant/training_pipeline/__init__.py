@@ -85,5 +85,20 @@ MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD: float=0.05
 Model Evalaution ralated constant start with MODE TRAINER VAR NAME
 """
 
+MODEL_EVALUATION_DIR_NAME: str ="model_evaluation"
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float=0.02
+MODEL_EVALUATION_REPORT_NAME: str="report.yaml"
+
+"""
+Model Pusher related constant start with MODEL PUSHER VAR NAME
+"""
+MODEL_PUSHER_DIR_NAME:str = "model_pusher"
+MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
+
+
+TRAINING_BUCKET_NAME: str = "mynetworksecurity108"
+PREDICTION_BUCKET_NAME: str = "Network-DataSource"
+
+
 if __name__ == '__main__':
     print(SCHEMA_FILE_PATH)
