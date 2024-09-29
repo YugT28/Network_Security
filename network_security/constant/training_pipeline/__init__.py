@@ -98,7 +98,7 @@ MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
 
 TRAINING_BUCKET_NAME: str = "mynetworksecurity108"
 PREDICTION_BUCKET_NAME: str = "Network-DataSource"
-
+PREDICTION_DIR='prediction'
 
 if __name__ == '__main__':
     print(SCHEMA_FILE_PATH)
